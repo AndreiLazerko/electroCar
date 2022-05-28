@@ -44,7 +44,7 @@ a{
 
 img, svg{
   display: block;
-  max-height: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -319,6 +319,102 @@ img, svg{
   line-height: 1.3;
 }
 
+.modal{
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  cursor: pointer;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.modal__block{
+  position: relative;
+  width: 680px;
+  padding: 40px 15px;
+  margin: auto;
+  background-color: aqua;
+  cursor: default;
+  border: 1px solid #646464;
+  border-radius: 8px;
+}
+
+.modal__container{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 440px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.modal__title{
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+  max-width: 380px;
+}
+
+.modal__form{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.modal__text{
+  display: block;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.modal__input{
+  border: 1px solid #C0C0C0;
+  border-radius: 6px;
+  width: 100%;
+  height: 48px;
+  padding: 15px;
+}
+
+.modal__input::placeholder{
+  color: #C0C0C0;
+}
+
+.modal__btn{
+  min-width: 380px;
+  height: 78px;
+  /* padding: 1px 10px; */
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background: #B8FF20;
+  outline: none;
+  font-size: 26px;
+  font-weight: 700;
+  color: #18171A;
+  transition-property: background-color, border-color, color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s, 0.2s, 0.3s;
+}
+
+.modal__btn:hover{
+  background-color: #CDF478;
+}
+.modal__btn:focus{
+  border-color: #18171A;
+}
+.modal__btn:active{
+  background-color: #18171A;
+  color: #fff;
+}
+
+.modal__close{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
 @media (max-width: 1200px) {
   .navigation__list{
     gap: 20px;
@@ -425,6 +521,11 @@ img, svg{
     font-size: 18px;
   }
 
+  .product__desctiption{
+    -webkit-line-clamp: 3;
+    margin-bottom: 20px;
+  }
+
   .contacts__title{
     font-size: 30px;
     margin-bottom: 20px;
@@ -518,10 +619,6 @@ img, svg{
   .product:nth-child(odd) .product__container{
     flex-direction: column;
     align-items: center;
-  }
-
-  .product__desctiption{
-    -webkit-line-clamp: 3;
   }
 
   .product__btn{
