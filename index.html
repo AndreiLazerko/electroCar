@@ -9,6 +9,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  
+  <script defer src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
+  </script>
+
+<!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script> -->
+
+  <script defer src="js/script.js"></script>
 </head>
 <body>
   <header class="header">
@@ -45,7 +53,7 @@
 
     <section class="product">
       <div class="container product__container">
-        <img src="images/item/gyroscooter.png" alt="gyroscooter">
+        <img class="product__photo" src="images/item/gyroscooter.png" alt="gyroscooter">
 
         <div class="product__content" id="gyroscooter">
           <h2 class="product__title">Гироскутер</h2>
@@ -62,7 +70,7 @@
 
     <section class="product" >
       <div class="container product__container">
-          <img src="images/item/monowheels.png" alt="monowheels">
+          <img class="product__photo" src="images/item/monowheels.png" alt="monowheels">
 
           <div class="product__content" id="monowheels">
             <h2 class="product__title">Моноколесо</h2>
@@ -79,7 +87,7 @@
 
     <section class="product">
       <div class="container product__container">
-        <img src="images/item/electroscooter.png" alt="electroscooter">
+        <img class="product__photo" src="images/item/electroscooter.png" alt="electroscooter">
 
         <div class="product__content" id="electroscooter">
           <h2 class="product__title">Электросамокат</h2>
@@ -148,12 +156,12 @@
       </div>
     </section>
   </main>
-  <footer>
+  <footer class="footer">
     <div class="container">
       <img class="footer__logo" src="images/header/logo.svg" alt="E-trans">
       <div class="footer__columns">
         <div class="footer__column">
-          <ul class="footer__list">
+          <ul class="footer__list contacts__list-footer">
             <li class="footer__item"><a href="#gyroscooter" class="footer__link">Гироскутеры</a></li>
             <li class="footer__item"><a href="#monowheels" class="footer__link">Моноколеса</a></li>
             <li class="footer__item"><a href="#electroscooter" class="footer__link">Электросамокаты</a></li>
@@ -161,12 +169,12 @@
         </div>
   
         <div class="footer__colum">
-          <h3>Адрес магазина:</h3>
-          <p>г. Москва, ул. Трубная 104/3 1&nbsp;этаж</p>
+          <h3 class="footer__title">Адрес магазина:</h3>
+          <p class="footer__description">г. Москва, ул. Трубная 104/3 1&nbsp;этаж</p>
         </div>
   
         <div class="footer__colum contacts">
-          <h3>Контакты:</h3>
+          <h3 class="footer__title">Контакты:</h3>
   
           <div class="contacts__list">
             <a class="contacts__link" href="tel:+7384883-38-12">+7(384)883-38-12</a>
